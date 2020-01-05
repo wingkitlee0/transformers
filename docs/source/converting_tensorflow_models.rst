@@ -26,7 +26,7 @@ Here is an example of the conversion process for a pre-trained ``BERT-Base Uncas
 
    export BERT_BASE_DIR=/path/to/bert/uncased_L-12_H-768_A-12
 
-   transformers-cli --model_type bert \
+   transformers-cli convert --model_type bert \
      --tf_checkpoint $BERT_BASE_DIR/bert_model.ckpt \
      --config $BERT_BASE_DIR/bert_config.json \
      --pytorch_dump_output $BERT_BASE_DIR/pytorch_model.bin
@@ -42,7 +42,7 @@ Here is an example of the conversion process for a pre-trained OpenAI GPT model,
 
    export OPENAI_GPT_CHECKPOINT_FOLDER_PATH=/path/to/openai/pretrained/numpy/weights
 
-   transformers-cli --model_type gpt \
+   transformers-cli convert --model_type gpt \
      --tf_checkpoint $OPENAI_GPT_CHECKPOINT_FOLDER_PATH \
      --pytorch_dump_output $PYTORCH_DUMP_OUTPUT \
      [--config OPENAI_GPT_CONFIG] \
@@ -58,7 +58,7 @@ Here is an example of the conversion process for a pre-trained OpenAI GPT-2 mode
 
    export OPENAI_GPT2_CHECKPOINT_PATH=/path/to/gpt2/pretrained/weights
 
-   transformers-cli --model_type gpt2 \
+   transformers-cli convert --model_type gpt2 \
      --tf_checkpoint $OPENAI_GPT2_CHECKPOINT_PATH \
      --pytorch_dump_output $PYTORCH_DUMP_OUTPUT \
      [--config OPENAI_GPT2_CONFIG] \
@@ -73,7 +73,7 @@ Here is an example of the conversion process for a pre-trained Transformer-XL mo
 
    export TRANSFO_XL_CHECKPOINT_FOLDER_PATH=/path/to/transfo/xl/checkpoint
 
-   transformers-cli --model_type transfo_xl \
+   transformers-cli convert --model_type transfo_xl \
      --tf_checkpoint $TRANSFO_XL_CHECKPOINT_FOLDER_PATH \
      --pytorch_dump_output $PYTORCH_DUMP_OUTPUT \
      [--config TRANSFO_XL_CONFIG] \
@@ -90,7 +90,7 @@ Here is an example of the conversion process for a pre-trained XLNet model:
    export TRANSFO_XL_CHECKPOINT_PATH=/path/to/xlnet/checkpoint
    export TRANSFO_XL_CONFIG_PATH=/path/to/xlnet/config
 
-   transformers-cli --model_type xlnet \
+   transformers-cli convert --model_type xlnet \
      --tf_checkpoint $TRANSFO_XL_CHECKPOINT_PATH \
      --config $TRANSFO_XL_CONFIG_PATH \
      --pytorch_dump_output $PYTORCH_DUMP_OUTPUT \
@@ -106,7 +106,7 @@ Here is an example of the conversion process for a pre-trained XLM model:
 
    export XLM_CHECKPOINT_PATH=/path/to/xlm/checkpoint
 
-   transformers-cli --model_type xlm \
+   transformers-cli convert --model_type xlm \
      --tf_checkpoint $XLM_CHECKPOINT_PATH \
      --pytorch_dump_output $PYTORCH_DUMP_OUTPUT
     [--config XML_CONFIG] \
